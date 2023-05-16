@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    border: none;
+    outline:none;
+    font-family: sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.container{
+    width: 400px;
+    height: min-content;
+    background-color:lightskyblue;
+    border-radius: 12px;
+    padding: 28px;
+    margin: 100px auto;
+    align-items: center;
+    text-align: center;
+}
+
+    

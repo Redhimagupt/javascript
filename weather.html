@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Application</h1>
+        <div id="search">
+        <input type="text" placeholder="Enter your location" id="text">
+        <button id="btn">Search</button>
+        </div>
+        
+                   <div class="error"></div>
+                     <div class="info">
+                        <div class="weather"></div>
+                        <h1 class="city">Hiranagar</h1>
+                        <h1 class="temp"></h1>
+                        
+                <div id="detail">
+                    <div class="col">
+                        
+                        <div>
+                            
+                            <label>Humidity :</label>
+                            <p class="humidity"></p>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        
+                        <div>
+                            <label>windspeed:</label>
+                            <p class="windspeed"></p>
+                            
+                        </div> 
+                        
+                     </div>
+                    
+                     </div>
+                     </div>
+                      <script>
+                    
+                       const url = `https://api.openweathermap.org/data/2.5/weather`;
+                
+                        const apikey='f0b428c14b14e78b73d862a36277308b';
+                        const searchBtn = document.querySelector("#btn");
+                        function getData(data)
+                        {
+                            console.log(data)
+                            document.querySelector(".error").style.display="none";
+                            document.querySelector(".info").style.display="block";
+                            document.querySelector(".city").innerHTML=data.name;
+                            document.querySelector(".temp").innerHTML=data.main.temp+"°C";
+                            document.querySelector(".humidity").innerHTML=data.main.humidity+"%";
+                            document.querySelector(".windspeed").innerHTML=data.wind.speed+"km/h";
+                            //document.querySelector(".Precipitation").innerHTML=data.Precipitation+"";
+                            
+                        }
+                     
+                        function getError(err)
+{
+    document.querySelector(".error").style.display="block";
+    document.querySelector(".error").innerHTML=err;
+    document.querySelector(".info").style.display="none"
+    
+}
+function getCity(city)
+{
+    const promise = new Promise((resolve,reject)=>{
+    const data = fetch(`${url}?q=${city}&appid=${apikey}&units=metric`)
+    .then((data)=>{
+        if(data.status===200)
+        {
+            resolve(data);
+        }
+        reject("City not found");
+    })
+    })
+    promise.then((data)=>data.json()).then((data)=>getData(data))
+     .catch((err)=>getError(err))
+}
+searchBtn.addEventListener("click", ()=>
+{ console.log()
+    const city = document.querySelector("#text").value;
+    getCity(city)
+}
+);
+getCity("Hiranagar");
+                         </script>
+                      </body>
+</html>
