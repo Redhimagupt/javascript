@@ -1,0 +1,224 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+ } 
+ body{
+    width:100%
+}
+#box {
+    border: 2px groove rgb(77, 151, 230);
+    height:60px;
+    width:550px;
+    padding:10px;
+    font-size:50px;
+    margin:auto;
+    background-color: rgb(173, 186, 186);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+#form {
+    border: 2px groove rgb(77, 151, 230);
+    width: 550px;
+    height:500px;
+    margin: auto;
+    background-color: rgb(173, 186, 186);
+    display:flex;
+    flex-direction:column;
+    padding:10px;
+}
+.row
+{
+
+    margin:15px;
+    width:500px;
+    height:30px;
+    
+}
+.radio
+{
+   
+    margin:15px;
+    width:500px;
+    height:40px;
+    
+}
+
+label{
+    font-size:18px;
+}
+
+
+input[type=text],input[type=number]{
+    width: 100px;
+    padding: 12px,20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(5, 5, 5);
+    border-radius: 4px;
+}
+input:not(.gender),textarea,select{
+    box-sizing: border-box;
+    width:90%;
+    font-size: large;
+    border-radius: 10px;
+    border:solid black;
+     padding:2px;
+     margin: 8px 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+input[type=radio]{
+    width: 3%;}
+
+    button{
+        flex-grow: 1;
+        width: 100Px;
+        border-radius: 15px;
+        font-size: large;
+        
+        height: 25px;
+        color: rgb(18, 20, 23);
+    }
+    button#btn{
+        background-color: skyblue;
+    }
+    #btn1{
+        background-color:skyblue ;
+    }
+    #btn2{
+        
+        color:black;
+        margin:5px  190px ;
+    }
+    
+   
+   
+    input[type="checkbox"] {
+        width:10Px;
+        height:10px;
+    }
+    span{
+        margin-right:1px;
+    }
+    
+    .button
+    {
+        
+        display:flex;
+        justify-content: space-around;
+        margin:25px;
+    }
+    .btn {
+        font-size: 20px;
+        width: 130px;
+        height: 40px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: rgb(150, 174, 201);
+    }
+    .btn1 {
+        font-size:15px;
+        width: 60px;
+        height: 30px;
+        border-radius: 5px;
+        margin : 2px;
+        background-color: rgb(150, 174, 201);
+    }
+    .update
+    {
+        display:none;
+    }
+    table{
+        background-color: rgb(173, 186, 186);
+    }
+    h1{
+        border:1px solid black;
+        background-color: rgb(173, 186, 186);
+    }
+    .search
+    {
+        margin-bottom:40px;
+        width:1300px;
+        
+        display:flex;
+        justify-content:space-between;
+        align-self: center;
+    }
+    .buttons
+    {
+        
+        width:300px;
+        display:flex;
+        justify-content: space-between;
+    }
+    
+    #search
+    {
+        border-radius:10px;
+        width:250px;
+        height:30px;
+    }
+    
+    .details {
+        margin: 80px auto;
+        width:1300px;
+        display:none;
+        flex-direction: column;
+    }
+    .error
+    { 
+        color:red;       
+    }
+    
+    
+    .dropdown
+    {
+        display:flex;
+        flex-direction: column;
+    
+    }
+    
+     @media screen and (max-width:600px) {
+    .container{
+        margin:30px auto;
+    }
+         #box {
+            width:320px;
+        }
+    
+        #form {
+            width:320px;
+            height:550px;
+            
+        }
+        input[type="text"],select {
+            width:280px;
+        }
+    #search
+    {
+        margin-top:20px;
+    }
+    .row
+    {
+    
+        margin-bottom:20px;
+        
+    }
+    .radio
+    {
+       
+        margin-bottom:20px;
+        
+    }
+    .button
+    {
+        
+        margin:30px 10px;
+    }
+    
+    
+     }

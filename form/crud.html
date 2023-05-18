@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="form-container">
+
+
+
+    <div class="container">
+        <div id="box">Form</div>
+
+        <form id="form">
+  
+
+  <div>
+  <label>Full Name:</label>
+  <input type="text" placeholder="Enter your name" onkeyup="check1(this)" name="fullname">
+  </div>
+  <div >
+    <label>DOB:</label>
+  <input type="date"  placeholder=" Enter your dob" onkeyup="check2(this)" name="dob">
+  
+</div>
+  <div>
+    <label>Roll No:</label>
+    <input type="number"  placeholder= "Enter your rollno" onkeyup="check3(this)" name="rollno">
+    </div>
+    <div>
+      <label>Email:</label>
+      <input type="text" placeholder="Enter your email" onkeyup="check4(this)" name="mail">
+      </div>
+      <div>
+        <label>Address:</label>
+        <input type="text"  placeholder="Enter your Address" onkeyup="check5(this)" name="address">
+        </div>
+        <div>
+          <label>phone no:</label>
+          <input type="number" placeholder="Enter your Contact no" onkeyup="check6(this)"  name="phone">
+          </div>
+          <div class="row">
+            <label></label>Gender:</label><br>
+           <div><input type="radio" class="gender" id="male" name="gender" value="male">
+              <label >Male</label>
+              <input type="radio" class="gender" id="Famale" name="gender" value="female">
+              <label >Famale</label>
+              <input type="radio" class="gender" id="Other" name="gender" value="Other">
+              <label >Other</label></div>
+                  
+        </div>
+          <div class="row">
+                     <label for="Stream"> Stream:</label><br>
+                        <input type="checkbox" name="Stream" value="BSC" ><span>BSC</span>
+                         
+                        <input type="checkbox" name="Stream" value="BCA" ><span>BCA</span>
+                        <input type="checkbox" name="Stream" value="BCOM" ><span>BCOM</span>
+                        <input type="checkbox" name="Stream" value="BA" ><span>BA</span>
+                        <input type="checkbox" name="Stream" value="BBA" ><span>BBA</span>
+                       
+                        </div>
+                         <br>
+                           
+                 
+                         <div class="button">
+                          <button class="btn update">Update</button>
+                          <button class="btn submit">Submit</button>
+                          <button class="btn showData">Show Data</button>
+                      </div>
+                  </form>
+              </div>
+      
+              <div class="details">
+                  <div class="search">
+                      <div class="buttons">
+                          <button class="btn add">Add</button>
+                          <select class="btn sort">
+                              <option value="">Sort By</option>
+                              <option value="Name"> Name</option>
+                              <option value="PhoneNo"> Phone</option>
+                              <option value="Email"> Email</option>
+                          </select>
+                      </div>
+                      </form>
+                      <input type="text" id="search" placeholder="Search by names....">
+                    </div>
+                        
+                        <table class="info" border="1" cellspacing="0" cellpadding="10px">
+                            <caption><h1>User Details</h1></caption>
+                            <thead>
+                                <tr id="head">
+                                    <th>fullname</th>
+                                    <th>DOB</th>
+                                    <th>Rollno</th>
+                                    <th>Email</th>
+                                    <th>Address</th>
+                                    <th>PhoneNo</th>
+                                    <th>Gender</th>
+                                    <th>Stream</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+        
+                            </tbody>
+                        </table>
+
+
+</div>
+</div>
+
+
+  <script src="form.js"></script>
+  
+</body>
+</html>
